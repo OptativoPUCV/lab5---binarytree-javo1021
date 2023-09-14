@@ -54,13 +54,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   TreeNode* current = tree->root;
 
   while(current != NULL);{
-    parent = curent;
+    parent = current;
     int comparar = tree->lower_than(key, current->pair->key);
 
     if(comparar < 0){
       current = current->left;
     } else {
-      current = current->rigth;
+      current = current->right;
     }
   }
   
