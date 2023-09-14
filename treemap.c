@@ -86,11 +86,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   
     if(aux == 0){
       tree->current = current;
-      return current ->pair;
-    } else if(aux < 0){
-        current = current->right;
+      return current->pair;
+    }
+    if(aux < 0){
+      current = current->left;
     } else {
-        current = current ->left;
+        current = current ->right;
     }
   }
 /*  wfds
