@@ -83,21 +83,25 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   }
   TreeNode* current = tree->root;
   
-  while(current != NULL){
-    int aux = tree->lower_than(key,current->pair->key);
-  
-    if(aux == 0){
-      tree->current = current;
-      return current->pair;
-    }
-    
-    if(aux < 0){
-      current = current->left;
-    } else {
-      current = current ->right;
-    }
+  int comprobar = is_equal(tree,tree->root->pair->key,key);
+  if(comprobar == 1){
+    tree->current = tree->root;
+    return tree->root->pair;
+  } else{
+    tree->current = tree->root;
   }
 
+  while(comprobar < 1){
+    int result = tree->lower_than(tree->current->pair->key, key);
+    if(result == 1){
+
+      tree->current = tree->current->right;
+    } else if(result == 0){
+      tree->current = tree->current->left;
+    }
+    comprobar = is_equal(tree,tree->current->pair->key,key);
+    
+  }
   return tree->current->pair;
 }
 
