@@ -82,7 +82,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode* current = tree->root;
 
   while(current != NULL){
-    int aux = tree->lower_than(current->pair->key,key);
+    int aux = tree->lower_than(key,current->pair->key);
   
     if(aux == 0){
       tree->current = current;
@@ -91,7 +91,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     if(aux < 0){
       current = current->left;
     } else {
-        current = current ->right;
+      current = current ->right;
     }
   }
 /*  wfds
