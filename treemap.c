@@ -82,16 +82,16 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode* current = tree->root;
 
   while(current != NULL){
-    int aux = tree->lower_than(key,current->pair->key);
+    int aux = tree->lower_than(current->pair->key,key);
   
     if(aux == 0){
       tree->current = current;
       return current->pair;
     }
     if(aux < 0){
-      current = current->left;
+      current = current->right;
     } else {
-      current = current ->right;
+      current = current ->left;
     }
   }
 /*  wfds
