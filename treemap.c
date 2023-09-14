@@ -50,7 +50,9 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
+  
 
+  
 }
 
 TreeNode * minimum(TreeNode * x){
@@ -97,11 +99,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         current = current ->right;
     }
   }
-  if(cerca != NULL){
-    tree->current = cerca;
-    return cerca->pair;
-  }
-  tree->current = NULL;
 /*  wfds
   while(tree->current != NULL){
     int resultado = tree->lower_than(key, tree->current->pair->key);
@@ -120,7 +117,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     
   }
 */
-  return NULL;
+  return tree->current->pair;
 }
 
 
