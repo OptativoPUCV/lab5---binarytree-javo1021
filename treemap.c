@@ -82,18 +82,19 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode* current = tree->root;
 
   while(current != NULL){
-    int aux = tree->lower_than(current->pair->key,key);
+    int aux = tree->lower_than(key,current->pair->key);
   
     if(aux == 0){
       tree->current = current;
       return current->pair;
     }
     if(aux < 0){
-      current = current->right;
+        current = current->left;
     } else {
-      current = current ->left;
+        current = current ->right;
     }
   }
+  tree->current = NULL;
 /*  wfds
   while(tree->current != NULL){
     int resultado = tree->lower_than(key, tree->current->pair->key);
