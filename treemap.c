@@ -97,24 +97,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       current = current ->right;
     }
   }
-/*  wfds
-  while(tree->current != NULL){
-    int resultado = tree->lower_than(key, tree->current->pair->key);
 
-    if(resultado == 0){
-      Pair* aux = tree->current->pair;
-      tree->current = tree->current;
-      return aux;
-    } else if (resultado < 0){
-      
-      tree->current = tree->current->left;
-    } else{
-      
-      tree->current = tree->current->right;
-    }
-    
-  }
-*/
   return tree->current->pair;
 }
 
