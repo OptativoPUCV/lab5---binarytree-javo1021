@@ -90,9 +90,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   while(comprobar < 1){
     int result = tree->lower_than(tree->current->pair->key, key);
     if(result == 1){
-
+      if(tree->current->right == NULL) return NULL;
       tree->current = tree->current->right;
     } else if(result == 0){
+      if(tree->current->left == NULL) return NULL;
       tree->current = tree->current->left;
     }
     comprobar = is_equal(tree,tree->current->pair->key,key);
