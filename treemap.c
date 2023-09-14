@@ -109,7 +109,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       if(node == node->parent->left){
         node->parent->left = NULL;
       } else{
-        node->paren->left = NULL;
+        node->parent->left = NULL;
       }
     }
     free(node->pair);
