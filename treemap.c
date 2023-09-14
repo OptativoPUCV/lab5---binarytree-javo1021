@@ -90,7 +90,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     } else if(aux > 0){
         current = current->left;
     } else {
-        current = current ->rigth;
+        current = current ->right;
     }
   }
 /*  wfds
