@@ -79,8 +79,21 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   if(tree == NULL || tree->root == NULL){
     return NULL;
   }
-  tree->current = tree->root;
+  TreeNode* current = tree->root;
 
+  while(current != NULL){
+    int aux = tree->lower_than(key, current ->pair->key);
+  
+    if(aux == 0){
+      tree->current = current;
+      return current ->pair;
+    } else if(aux > 0){
+        current = current->left;
+    } else {
+        current = current ->rigth;
+    }
+  }
+/*  wfds
   while(tree->current != NULL){
     int resultado = tree->lower_than(key, tree->current->pair->key);
 
@@ -97,7 +110,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     }
     
   }
-
+*/
   return NULL;
 }
 
