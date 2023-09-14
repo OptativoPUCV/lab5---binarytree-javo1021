@@ -44,3 +44,16 @@ treemap.c:90:3: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 8808d7f
+Thu 14 Sep 2023 04:54:08 AM UTC: 
+ treemap.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:85:62: error: ‘Pair’ has no member named ‘keir’
+   85 |     int resultado = tree->lower_than(key, tree->current->pair->keir);
+      |                                                              ^~
+treemap.c:92:27: error: ‘TreeMap’ has no member named ‘rigth’
+   92 |       tree->current = tree->rigth;
+      |                           ^~
+Compilation failed
+3bb2d91
