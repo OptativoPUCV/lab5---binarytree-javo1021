@@ -187,7 +187,7 @@ Pair * firstTreeMap(TreeMap * tree) {
     tree->root = tree->root->left;
   }
 
-  tree->curremt = tree->root;
+  tree->current = tree->root;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
