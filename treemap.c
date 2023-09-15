@@ -194,7 +194,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   TreeNode* sucesor =NULL;
   TreeNode* padre = tree->root;
 
-  while(padre = tree->curent){
+  while(padre != tree->current){
     
   }
   return NULL;
