@@ -202,5 +202,6 @@ Pair * nextTreeMap(TreeMap * tree) {
       padre = padre->right;
     }
   }
+  tree->current = sucesor;
   return sucesor->pair;
 }
