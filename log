@@ -513,3 +513,21 @@ Fri 15 Sep 2023 04:43:22 AM UTC:
  tests:  20|2
 total_score: 45/70
 89a04ee
+Fri 15 Sep 2023 04:49:19 AM UTC: 
+ treemap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:197:23: error: ‘TreeMap’ has no member named ‘curent’; did you mean ‘current’?
+  197 |   while(padre = tree->curent){
+      |                       ^~~~~~
+      |                       current
+treemap.c:195:13: error: variable ‘padre’ set but not used [-Werror=unused-but-set-variable]
+  195 |   TreeNode* padre = tree->root;
+      |             ^~~~~
+treemap.c:194:13: error: unused variable ‘sucesor’ [-Werror=unused-variable]
+  194 |   TreeNode* sucesor =NULL;
+      |             ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8228406

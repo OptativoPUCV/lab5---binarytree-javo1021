@@ -190,5 +190,12 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+
+  TreeNode* sucesor =NULL;
+  TreeNode* padre = tree->root;
+
+  while(padre = tree->curent){
+    
+  }
+  return NULL;
 }
