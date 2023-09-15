@@ -542,3 +542,9 @@ treemap.c:194:13: error: unused variable ‘sucesor’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 10b4937
+Fri 15 Sep 2023 04:50:48 AM UTC: 
+ treemap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+ tests:  20|2
+total_score: 45/70
+fbdccb0

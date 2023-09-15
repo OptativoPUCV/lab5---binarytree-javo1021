@@ -195,7 +195,10 @@ Pair * nextTreeMap(TreeMap * tree) {
   TreeNode* padre = tree->root;
 
   while(padre != tree->current){
-    
+    if(tree->lower_than(tree->current->pair->key, padre->pair->key)){
+      sucesor = padre;
+      padre = padre->left;
+    }
   }
-  return NULL;
+  return sucesor->pair;
 }
