@@ -600,3 +600,21 @@ treemap.c:180:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 e74579d
+Fri 15 Sep 2023 11:07:08 PM UTC: 
+ treemap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:185:26: error: ‘TreeNode’ has no member named ‘light’; did you mean ‘right’?
+  185 |       current = current->light;
+      |                          ^~~~~
+      |                          right
+treemap.c:180:13: error: variable ‘ub_node’ set but not used [-Werror=unused-but-set-variable]
+  180 |   TreeNode* ub_node = NULL;
+      |             ^~~~~~~
+treemap.c:192:1: error: control reaches end of non-void function [-Werror=return-type]
+  192 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a232d67
