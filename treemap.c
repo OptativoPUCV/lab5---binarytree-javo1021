@@ -203,5 +203,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
   }
   tree->current = sucesor;
-  return sucesor->pair;
+  if(sucesor != NULL){
+    return sucesor->pair;
+  }
+  return NULL;
 }
