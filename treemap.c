@@ -198,6 +198,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(tree->lower_than(tree->current->pair->key, padre->pair->key)){
       sucesor = padre;
       padre = padre->left;
+    } else {
+      padre = padre->right;
     }
   }
   return sucesor->pair;
